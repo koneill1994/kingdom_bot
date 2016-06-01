@@ -28,12 +28,20 @@ The bot would need mod access to the subreddit in order to update the maps, so I
 
 #Map generation
 
-![Looks a bit like a bacteria culture, doesn't it?](https://i.imgur.com/b6HcSyJ.gif)
-
 The map created by `counties_maker_2.py` is represented by a 256*256 pixel grid, divided in between 200 different counties.  
 
 Here's how the algorithm works:
 
 * Randomly pick 200 points within the empty map.  These "capitals" are essentially each county's starting point.  
 * Iterate the following until all squares are claimed:
- * 
+  * For every county, do the following:
+   * Get edge_territory, a list of all squares on the exterior of the county (the capital is automatically placed in this list)
+   * For every square in edge_territory, add the adjacent squares not already claimed by a county to a list called adjacent
+    * If there are no unclaimed adjacent squares, remove the square from edge_territory (as obviously its no longer on the edge)
+   * Pick a random square from adjacent to claim
+
+This method allows the counties to have semi-realistic borders with each-other.  
+
+![Looks a bit like a bacteria culture, doesn't it?](https://i.imgur.com/b6HcSyJ.gif)
+
+It also produces a nice-looking gif (this one was made by outputting the map every ten steps, so for every frame, each territory will gain 10 additional squares, unless it has been blocked in by its neighbors already.  
