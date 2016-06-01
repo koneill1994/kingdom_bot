@@ -14,7 +14,7 @@ The bot would need mod access to the subreddit in order to update the maps, so I
 
 # What does it do?
 
-`reddit_bot.py` runs the to-and-for with reddit.  It loads or creates a map using **counties_maker_2.py**, and then every thirty seconds it:
+`reddit_bot.py` runs the to-and-fro with reddit.  It loads or creates a map using **counties_maker_2.py**, and then every thirty seconds it:
 
 * Processes requests from users summoning it
 * Updates the game maps
@@ -44,7 +44,12 @@ This method allows the counties to have semi-realistic borders with each-other.
 
 ![Looks a bit like a bacteria culture, doesn't it?](https://i.imgur.com/b6HcSyJ.gif)
 
-It also produces a nice-looking gif (this one was made by outputting the map every ten steps, so for every frame, each territory will gain 10 additional squares, unless it has been blocked in by its neighbors already.)
+It also produces a nice-looking gif (this one was made by outputting the map every ten steps, so for every frame, each territory will gain 10 additional squares, unless it has been hemmed in by its neighbors already.)
 
 The mad race for territory when there's only one direction to expand is interesting, but the long smears of territory are not really ideal when trying to emulate real-world political borders.  This could likely be improved by use of [Lloyd's algorithm](https://en.wikipedia.org/wiki/Lloyd%27s_algorithm) to fight off [clustering](https://en.wikipedia.org/wiki/Clustering_illusion) a little bit.  (See also [here](http://bit-player.org/2011/a-slight-discrepancy))
 
+#kingdoms_test.py
+
+Based off of these two tutorials:
+* http://www.redblobgames.com/maps/terrain-from-noise/
+* https://cmaher.github.io/posts/working-with-simplex-noise/
