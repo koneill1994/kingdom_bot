@@ -14,4 +14,4 @@ The bot would need mod access to the subreddit in order to update the maps, so I
 
 # What does it do?
 
-![](https://i.imgur.com/b6HcSyJ.gfig)
+![](https://i.imgur.com/b6HcSyJ.gif)
