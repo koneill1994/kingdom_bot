@@ -44,4 +44,7 @@ This method allows the counties to have semi-realistic borders with each-other.
 
 ![Looks a bit like a bacteria culture, doesn't it?](https://i.imgur.com/b6HcSyJ.gif)
 
-It also produces a nice-looking gif (this one was made by outputting the map every ten steps, so for every frame, each territory will gain 10 additional squares, unless it has been blocked in by its neighbors already.  
+It also produces a nice-looking gif (this one was made by outputting the map every ten steps, so for every frame, each territory will gain 10 additional squares, unless it has been blocked in by its neighbors already.)
+
+The mad race for territory when there's only one direction to expand is interesting, but the long smears of territory are not really ideal when trying to emulate real-world political borders.  This could likely be improved by use of [Lloyd's algorithm](https://en.wikipedia.org/wiki/Lloyd%27s_algorithm) to fight off [clustering](https://en.wikipedia.org/wiki/Clustering_illusion) a little bit.  (See also [here](http://bit-player.org/2011/a-slight-discrepancy))
+
