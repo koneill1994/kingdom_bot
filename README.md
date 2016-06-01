@@ -24,8 +24,15 @@ The bot would need mod access to the subreddit in order to update the maps, so I
 
 `counties_maker_2.py` is imported by **reddit_bot.py**, and holds the class definitions for the data structures which represent holdings, kingdoms, and rulers.  It also creates a map of different counties that users can take control of.  
 
-The map is represented by a 256*256 pixel grid, divided in between 200 different counties.  
+`kingdoms_test.py` is a side-project not yet integrated into the game.  It is a more realistic, procedurally generated map, which ideally would be used to generate productivity values for the different counties depending on the biome.  
 
 #Map generation
 
 ![Looks a bit like a bacteria culture, doesn't it?](https://i.imgur.com/b6HcSyJ.gif)
+
+The map created by `counties_maker_2.py` is represented by a 256*256 pixel grid, divided in between 200 different counties.  
+
+Here's how the algorithm works:
+
+* Randomly pick 200 points within the empty map.  These "capitals" are essentially each county's starting point.  
+  * test
