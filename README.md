@@ -14,4 +14,20 @@ The bot would need mod access to the subreddit in order to update the maps, so I
 
 # What does it do?
 
-![](https://i.imgur.com/b6HcSyJ.gif)
+**reddit_bot.py** runs the to-and-for with reddit.  It loads or creates a map using **counties_maker_2.py**, and then every thirty seconds it:
+
+* Processes requests from users summoning it
+* Updates the game maps
+* Uploads the game maps to the subreddit wiki
+* Pays the rulers proportional to the number of counties they own and the productivity of those counties
+* Saves the game state using pickle
+
+**counties_maker_2.py**
+
+This file is imported by **reddit_bot.py**, and holds the class definitions for the data structures which represent holdings, kingdoms, and rulers.  It also creates a map of different counties that users can take control of.  
+
+The map is represented by a 256*256 pixel grid, divided in between 200 different counties.  
+
+##Map generation
+
+![Looks a bit like a bacteria culture, doesn't it?](https://i.imgur.com/b6HcSyJ.gif)
