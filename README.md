@@ -38,7 +38,7 @@ Here's how the algorithm works:
    * Get edge_territory, a list of all squares on the exterior of the county (the capital is automatically placed in this list)
    * For every square in edge_territory, add the adjacent squares not already claimed by a county to a list called adjacent
     * If there are no unclaimed adjacent squares, remove the square from edge_territory (as obviously its no longer on the edge)
-   * Pick a random square from adjacent to claim
+   * Pick a random square from adjacent and add it to the county's territory
 
 This method allows the counties to have semi-realistic borders with each-other.  
 
