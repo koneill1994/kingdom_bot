@@ -35,4 +35,5 @@ The map created by `counties_maker_2.py` is represented by a 256*256 pixel grid,
 Here's how the algorithm works:
 
 * Randomly pick 200 points within the empty map.  These "capitals" are essentially each county's starting point.  
-  * test
+* Iterate the following until all squares are claimed:
+ * 
